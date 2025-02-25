@@ -1,0 +1,6 @@
+@FBackend_HostAddress = http://localhost:5145
+
+GET {{FBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "erf0GNzxlGqBHKoLlz/Y+BLQbil/vSEzd+vKKXIMEXI=",
+  "Source": "FBackend",
+  "BasePath": "_content/FBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

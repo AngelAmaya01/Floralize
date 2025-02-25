@@ -1,0 +1,213 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\FBackend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\fbackend\\fbackend\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\fbackend\\fbackend\\models\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\fbackend\\fbackend\\models\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\fbackend\\fbackend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\fbackend\\fbackend\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\fbackend\\fbackend\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\fbackend\\fbackend\\models\\dtos\\resetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\dtos\\resetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\fbackend\\fbackend\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\fbackend\\fbackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\fbackend\\fbackend\\models\\dtos\\responsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\dtos\\responsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\fbackend\\fbackend\\models\\dtos\\forgotpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\dtos\\forgotpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\fbackend\\fbackend\\migrations\\20250225152238_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\migrations\\20250225152238_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\FBackend\\FBackend\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "FBackend\\Services\\EmailService.cs",
+              "ToolTip": "C:\\FBackend\\FBackend\\Services\\EmailService.cs",
+              "RelativeToolTip": "FBackend\\Services\\EmailService.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwCYAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:28:35.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "C:\\FBackend\\FBackend\\Controllers\\RoleController.cs",
+              "RelativeDocumentMoniker": "FBackend\\Controllers\\RoleController.cs",
+              "ToolTip": "C:\\FBackend\\FBackend\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "FBackend\\Controllers\\RoleController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwEcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:20:21.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\FBackend\\FBackend\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "FBackend\\Services\\AuthService.cs",
+              "ToolTip": "C:\\FBackend\\FBackend\\Services\\AuthService.cs",
+              "RelativeToolTip": "FBackend\\Services\\AuthService.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCEAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:17:48.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\FBackend\\FBackend\\Models\\User.cs",
+              "RelativeDocumentMoniker": "FBackend\\Models\\User.cs",
+              "ToolTip": "C:\\FBackend\\FBackend\\Models\\User.cs",
+              "RelativeToolTip": "FBackend\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:16:43.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Role.cs",
+              "DocumentMoniker": "C:\\FBackend\\FBackend\\Models\\Role.cs",
+              "RelativeDocumentMoniker": "FBackend\\Models\\Role.cs",
+              "ToolTip": "C:\\FBackend\\FBackend\\Models\\Role.cs",
+              "RelativeToolTip": "FBackend\\Models\\Role.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:16:40.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ResetPasswordDto.cs",
+              "DocumentMoniker": "C:\\FBackend\\FBackend\\Models\\DTOs\\ResetPasswordDto.cs",
+              "RelativeDocumentMoniker": "FBackend\\Models\\DTOs\\ResetPasswordDto.cs",
+              "ToolTip": "C:\\FBackend\\FBackend\\Models\\DTOs\\ResetPasswordDto.cs",
+              "RelativeToolTip": "FBackend\\Models\\DTOs\\ResetPasswordDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:16:03.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "C:\\FBackend\\FBackend\\Models\\DTOs\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "FBackend\\Models\\DTOs\\RegisterDto.cs",
+              "ToolTip": "C:\\FBackend\\FBackend\\Models\\DTOs\\RegisterDto.cs",
+              "RelativeToolTip": "FBackend\\Models\\DTOs\\RegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:15:03.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\FBackend\\FBackend\\Models\\DTOs\\LoginDto.cs",
+              "RelativeDocumentMoniker": "FBackend\\Models\\DTOs\\LoginDto.cs",
+              "ToolTip": "C:\\FBackend\\FBackend\\Models\\DTOs\\LoginDto.cs",
+              "RelativeToolTip": "FBackend\\Models\\DTOs\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:14:52.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20250225152238_init.cs",
+              "DocumentMoniker": "C:\\FBackend\\FBackend\\Migrations\\20250225152238_init.cs",
+              "RelativeDocumentMoniker": "FBackend\\Migrations\\20250225152238_init.cs",
+              "ToolTip": "C:\\FBackend\\FBackend\\Migrations\\20250225152238_init.cs",
+              "RelativeToolTip": "FBackend\\Migrations\\20250225152238_init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:22:39.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\FBackend\\FBackend\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "FBackend\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\FBackend\\FBackend\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "FBackend\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAUwEoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:13:44.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ResponseDto.cs",
+              "DocumentMoniker": "C:\\FBackend\\FBackend\\Models\\DTOs\\ResponseDto.cs",
+              "RelativeDocumentMoniker": "FBackend\\Models\\DTOs\\ResponseDto.cs",
+              "ToolTip": "C:\\FBackend\\FBackend\\Models\\DTOs\\ResponseDto.cs",
+              "RelativeToolTip": "FBackend\\Models\\DTOs\\ResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:16:04.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ForgotPasswordDto.cs",
+              "DocumentMoniker": "C:\\FBackend\\FBackend\\Models\\DTOs\\ForgotPasswordDto.cs",
+              "RelativeDocumentMoniker": "FBackend\\Models\\DTOs\\ForgotPasswordDto.cs",
+              "ToolTip": "C:\\FBackend\\FBackend\\Models\\DTOs\\ForgotPasswordDto.cs",
+              "RelativeToolTip": "FBackend\\Models\\DTOs\\ForgotPasswordDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T15:15:57.31Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
