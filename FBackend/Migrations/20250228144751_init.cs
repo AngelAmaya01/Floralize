@@ -40,7 +40,7 @@ namespace FBackend.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    Username = table.Column<string>(type: "longtext", nullable: false)
+                    Username = table.Column<string>(type: "varchar(30)", maxLength: 30, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Email = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -94,8 +94,10 @@ namespace FBackend.Migrations
                 values: new object[,]
                 {
                     { 1, "Administrador del sistema", "Admin" },
-                    { 2, "Dentista", "Dentist" },
-                    { 3, "Paciente", "Patient" }
+                    { 2, "Gerencia/Supervisor", "Gerente" },
+                    { 3, "Gestion de ventas", "Vendedor" },
+                    { 4, "Encargado de inventario", "Inventario" },
+                    { 5, "Usuario", "User" }
                 });
 
             migrationBuilder.CreateIndex(

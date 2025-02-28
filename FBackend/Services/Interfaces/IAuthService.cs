@@ -1,4 +1,5 @@
 ﻿
+using FBackend.Models;
 using FBackend.Models.DTOs;
 
 namespace ApiCitaOdon.Services.Interfaces

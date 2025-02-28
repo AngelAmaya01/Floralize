@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FBackend.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250225152238_init")]
+    [Migration("20250228144751_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -54,14 +54,26 @@ namespace FBackend.Migrations
                         new
                         {
                             Id = 2,
-                            Description = "Dentista",
-                            Name = "Dentist"
+                            Description = "Gerencia/Supervisor",
+                            Name = "Gerente"
                         },
                         new
                         {
                             Id = 3,
-                            Description = "Paciente",
-                            Name = "Patient"
+                            Description = "Gestion de ventas",
+                            Name = "Vendedor"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Description = "Encargado de inventario",
+                            Name = "Inventario"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Description = "Usuario",
+                            Name = "User"
                         });
                 });
 
@@ -103,7 +115,8 @@ namespace FBackend.Migrations
 
                     b.Property<string>("Username")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(30)
+                        .HasColumnType("varchar(30)");
 
                     b.HasKey("Id");
 

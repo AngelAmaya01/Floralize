@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\FBackend\\FBackend\\FBackend.csproj": {}
+    "C:\\ProyectoFlores\\FBackend\\FBackend\\FBackend.csproj": {}
   },
   "projects": {
-    "C:\\FBackend\\FBackend\\FBackend.csproj": {
+    "C:\\ProyectoFlores\\FBackend\\FBackend\\FBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\FBackend\\FBackend\\FBackend.csproj",
+        "projectUniqueName": "C:\\ProyectoFlores\\FBackend\\FBackend\\FBackend.csproj",
         "projectName": "FBackend",
-        "projectPath": "C:\\FBackend\\FBackend\\FBackend.csproj",
+        "projectPath": "C:\\ProyectoFlores\\FBackend\\FBackend\\FBackend.csproj",
         "packagesPath": "C:\\Users\\angel\\.nuget\\packages\\",
-        "outputPath": "C:\\FBackend\\FBackend\\obj\\",
+        "outputPath": "C:\\ProyectoFlores\\FBackend\\FBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
