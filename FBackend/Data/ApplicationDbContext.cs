@@ -12,6 +12,12 @@ public class ApplicationDbContext : DbContext
 
     public DbSet<User> Users { get; set; }
     public DbSet<Role> Roles { get; set; }
+    public DbSet<Usuario> Usuarios { get; set; }
+    public DbSet<Proveedores> Proveedores { get; set; }
+    public DbSet<Producto> Productos { get; set; }
+    public DbSet<Pedidos> Pedidos { get; set; }
+    public DbSet<Inventario> Inventario { get; set; }
+    public DbSet<DetallePedido> DetallePedidos { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -21,6 +27,14 @@ public class ApplicationDbContext : DbContext
             .HasMany(u => u.Roles)
             .WithMany(r => r.Users)
             .UsingEntity(j => j.ToTable("UserRoles"));
+
+        // Relación uno a muchos entre Pedido y DetallePedido
+        modelBuilder.Entity<DetallePedido>()
+            .HasOne(dp => dp.Pedidos)
+            .WithMany(p => p.Detalles)
+            .HasForeignKey(dp => dp.PedidoId)
+            .OnDelete(DeleteBehavior.Cascade);
+
 
         //Gestion de roles
         modelBuilder.Entity<Role>().HasData(

@@ -3,56 +3,36 @@
   "WorkspaceRootPath": "C:\\ProyectoFlores\\FBackend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\models\\pedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\pedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\models\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\models\\detallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\detallepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\role.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\services\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\services\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\models\\dtos\\resetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\dtos\\resetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\models\\dtos\\responsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\dtos\\responsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\models\\dtos\\forgotpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\dtos\\forgotpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\services\\interfaces\\iauthservice.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\services\\interfaces\\iauthservice.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\models\\proveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\proveedores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,171 +42,104 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Services\\Interfaces\\IAuthService.cs",
-              "RelativeDocumentMoniker": "FBackend\\Services\\Interfaces\\IAuthService.cs",
-              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Services\\Interfaces\\IAuthService.cs",
-              "RelativeToolTip": "FBackend\\Services\\Interfaces\\IAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T15:43:01.904Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "FBackend\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "FBackend\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAKEAAAAAAAAAAAAwwKwAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T15:41:48.62Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "FBackend\\Data\\ApplicationDbContext.cs",
               "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "FBackend\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAkwB0AAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAmwCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T14:32:40.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T21:15:02.837Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Program.cs",
-              "RelativeDocumentMoniker": "FBackend\\Program.cs",
-              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Program.cs",
-              "RelativeToolTip": "FBackend\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "DetallePedido.cs",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\DetallePedido.cs",
+              "RelativeDocumentMoniker": "FBackend\\Models\\DetallePedido.cs",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\DetallePedido.cs",
+              "RelativeToolTip": "FBackend\\Models\\DetallePedido.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T01:21:37.378Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "FBackend\\Services\\AuthService.cs",
-              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Services\\AuthService.cs",
-              "RelativeToolTip": "FBackend\\Services\\AuthService.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAuwFwAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T15:17:48.041Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Role.cs",
-              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Role.cs",
-              "RelativeDocumentMoniker": "FBackend\\Models\\Role.cs",
-              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Role.cs",
-              "RelativeToolTip": "FBackend\\Models\\Role.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T15:16:40.273Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T21:12:43.214Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "FBackend\\Services\\EmailService.cs",
-              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Services\\EmailService.cs",
-              "RelativeToolTip": "FBackend\\Services\\EmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG8AAAAkAAAAAAAAAA==",
+              "Title": "Inventario.cs",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Inventario.cs",
+              "RelativeDocumentMoniker": "FBackend\\Models\\Inventario.cs",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Inventario.cs",
+              "RelativeToolTip": "FBackend\\Models\\Inventario.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA6wBYAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T14:48:25.956Z",
+              "WhenOpened": "2025-03-21T21:12:13.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Producto.cs",
+              "RelativeDocumentMoniker": "FBackend\\Models\\Producto.cs",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Producto.cs",
+              "RelativeToolTip": "FBackend\\Models\\Producto.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAcwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T21:06:11.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\User.cs",
+              "RelativeDocumentMoniker": "FBackend\\Models\\User.cs",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\User.cs",
+              "RelativeToolTip": "FBackend\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T21:00:07.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "FBackend\\Models\\Usuario.cs",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Usuario.cs",
+              "RelativeToolTip": "FBackend\\Models\\Usuario.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowAgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T20:59:53.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Pedidos.cs",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Pedidos.cs",
+              "RelativeDocumentMoniker": "FBackend\\Models\\Pedidos.cs",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Pedidos.cs",
+              "RelativeToolTip": "FBackend\\Models\\Pedidos.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T21:09:23.976Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Startup.cs",
-              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Startup.cs",
-              "RelativeDocumentMoniker": "FBackend\\Startup.cs",
-              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Startup.cs",
-              "RelativeToolTip": "FBackend\\Startup.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T15:12:50.292Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RoleController.cs",
-              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Controllers\\RoleController.cs",
-              "RelativeDocumentMoniker": "FBackend\\Controllers\\RoleController.cs",
-              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Controllers\\RoleController.cs",
-              "RelativeToolTip": "FBackend\\Controllers\\RoleController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwEcAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T15:20:21.944Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ResetPasswordDto.cs",
-              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\DTOs\\ResetPasswordDto.cs",
-              "RelativeDocumentMoniker": "FBackend\\Models\\DTOs\\ResetPasswordDto.cs",
-              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\DTOs\\ResetPasswordDto.cs",
-              "RelativeToolTip": "FBackend\\Models\\DTOs\\ResetPasswordDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T15:16:03.394Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "IEmailService.cs",
-              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Services\\Interfaces\\IEmailService.cs",
-              "RelativeDocumentMoniker": "FBackend\\Services\\Interfaces\\IEmailService.cs",
-              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Services\\Interfaces\\IEmailService.cs",
-              "RelativeToolTip": "FBackend\\Services\\Interfaces\\IEmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Title": "Proveedores.cs",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Proveedores.cs",
+              "RelativeDocumentMoniker": "FBackend\\Models\\Proveedores.cs",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Proveedores.cs",
+              "RelativeToolTip": "FBackend\\Models\\Proveedores.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAYwBMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T19:37:17.093Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ResponseDto.cs",
-              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\DTOs\\ResponseDto.cs",
-              "RelativeDocumentMoniker": "FBackend\\Models\\DTOs\\ResponseDto.cs",
-              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\DTOs\\ResponseDto.cs",
-              "RelativeToolTip": "FBackend\\Models\\DTOs\\ResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T15:16:04.661Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ForgotPasswordDto.cs",
-              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\DTOs\\ForgotPasswordDto.cs",
-              "RelativeDocumentMoniker": "FBackend\\Models\\DTOs\\ForgotPasswordDto.cs",
-              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\DTOs\\ForgotPasswordDto.cs",
-              "RelativeToolTip": "FBackend\\Models\\DTOs\\ForgotPasswordDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T15:15:57.31Z"
+              "WhenOpened": "2025-03-21T21:03:34.283Z"
             }
           ]
         }
