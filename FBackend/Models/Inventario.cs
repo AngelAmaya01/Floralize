@@ -6,10 +6,10 @@ namespace FBackend.Models
     public class Inventario
     {
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         [Required, ForeignKey("Producto")]
-        public int ProductoId { get; set; }
+        public Guid ProductoId { get; set; }
 
         [Required]
         public int Cantidad { get; set; }

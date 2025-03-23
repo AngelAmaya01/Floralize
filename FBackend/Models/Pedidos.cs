@@ -6,10 +6,10 @@ namespace FBackend.Models
     public class Pedidos
     {
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         [Required, ForeignKey("Cliente")]
-        public int ClienteId { get; set; }
+        public Guid ClienteId { get; set; }
 
         [Required]
         public DateTime FechaPedido { get; set; }

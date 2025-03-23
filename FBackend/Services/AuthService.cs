@@ -59,7 +59,7 @@ public class AuthService : IAuthService
         };
 
         // Asignar rol de paciente por defecto
-        var patientRole = await _context.Roles.FirstOrDefaultAsync(r => r.Id == 5);
+        var patientRole = await _context.Roles.FirstOrDefaultAsync(r => r.Name == "User");
         if (patientRole != null)
         {
             user.Roles.Add(patientRole);

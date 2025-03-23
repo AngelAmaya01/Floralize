@@ -43,7 +43,7 @@ public class RoleController : ControllerBase
     }
 
     [HttpPost("assign/{userId}")]
-    public async Task<IActionResult> AssignRole(int userId, [FromBody] int roleId)
+    public async Task<IActionResult> AssignRole(Guid userId, [FromBody] Guid roleId)
     {
         var user = await _context.Users
             .Include(u => u.Roles)
@@ -66,7 +66,7 @@ public class RoleController : ControllerBase
     }
 
     [HttpDelete("remove/{userId}/{roleId}")]
-    public async Task<IActionResult> RemoveRole(int userId, int roleId)
+    public async Task<IActionResult> RemoveRole(Guid userId, Guid roleId)
     {
         var user = await _context.Users
             .Include(u => u.Roles)
@@ -80,11 +80,11 @@ public class RoleController : ControllerBase
             return NotFound("El usuario no tiene este rol");
 
         // Evitar que un usuario se quite a sí mismo el rol de Admin
-        var currentUserId = int.Parse(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value);
-        if (userId == currentUserId && role.Name == "Admin")
-        {
-            return BadRequest("No puedes quitarte a ti mismo el rol de Administrador");
-        }
+        //var currentUserId = int.Parse(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value);
+        //if (userId == currentUserId && role.Name == "Admin")
+        //{
+        //    return BadRequest("No puedes quitarte a ti mismo el rol de Administrador");
+        //}
 
         user.Roles.Remove(role);
         await _context.SaveChangesAsync();

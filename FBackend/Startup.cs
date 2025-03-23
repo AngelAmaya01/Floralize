@@ -1,8 +1,11 @@
 ﻿using ApiCitaOdon.Data;
 using ApiCitaOdon.Services;
 using ApiCitaOdon.Services.Interfaces;
+using FBackend.Services;
+using FBackend.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
@@ -23,15 +26,24 @@ public class Startup
         services.AddSwaggerGen();
 
         // Configuración de la base de datos
+        //services.AddDbContext<ApplicationDbContext>(options =>
+        //    options.UseMySql(
+        //        _configuration.GetConnectionString("DefaultConnection"),
+        //        ServerVersion.AutoDetect(_configuration.GetConnectionString("DefaultConnection"))
+        //    ));
         services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseMySql(
-                _configuration.GetConnectionString("DefaultConnection"),
-                ServerVersion.AutoDetect(_configuration.GetConnectionString("DefaultConnection"))
-            ));
-
+                           options.UseNpgsql(_configuration.GetConnectionString("DefaultConnection")
+                           ));
         // Servicios personalizados
         services.AddScoped<IEmailService, EmailService>();
         services.AddScoped<IAuthService, AuthService>();
+
+        //Add Service
+        services.AddTransient<IProveedorService, ProveedorService>();
+        services.AddTransient<IProductoService, ProductoService>();
+
+        //mapper
+        services.AddAutoMapper(typeof(Startup));
 
         // Configuración de CORS
         services.AddCors(options =>

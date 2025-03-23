@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ProyectoFlores\\FBackend\\FBackend\\FBackend.csproj": {}
+    "C:\\Users\\Usuario\\OneDrive\\fotos\\Documentos\\1 PAC 2025\\Proyecto Floralize\\Floralize\\FBackend\\FBackend.csproj": {}
   },
   "projects": {
-    "C:\\ProyectoFlores\\FBackend\\FBackend\\FBackend.csproj": {
+    "C:\\Users\\Usuario\\OneDrive\\fotos\\Documentos\\1 PAC 2025\\Proyecto Floralize\\Floralize\\FBackend\\FBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ProyectoFlores\\FBackend\\FBackend\\FBackend.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\fotos\\Documentos\\1 PAC 2025\\Proyecto Floralize\\Floralize\\FBackend\\FBackend.csproj",
         "projectName": "FBackend",
-        "projectPath": "C:\\ProyectoFlores\\FBackend\\FBackend\\FBackend.csproj",
-        "packagesPath": "C:\\Users\\angel\\.nuget\\packages\\",
-        "outputPath": "C:\\ProyectoFlores\\FBackend\\FBackend\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\OneDrive\\fotos\\Documentos\\1 PAC 2025\\Proyecto Floralize\\Floralize\\FBackend\\FBackend.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\OneDrive\\fotos\\Documentos\\1 PAC 2025\\Proyecto Floralize\\Floralize\\FBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\angel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -38,13 +38,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -53,6 +47,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.27.4, )"
             },
             "FluentEmail.Smtp": {
               "target": "Package",
@@ -76,7 +74,13 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.11, )"
+              "version": "[9.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.1, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -92,9 +96,13 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
-            "Pomelo.EntityFrameworkCore.MySql": {
+            "Npgsql": {
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[9.0.3, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.4, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -120,7 +128,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

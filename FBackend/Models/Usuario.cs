@@ -4,7 +4,7 @@ namespace FBackend.Models
 {
     public class Usuario
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         [Required]
         [MinLength(5), MaxLength(30)]

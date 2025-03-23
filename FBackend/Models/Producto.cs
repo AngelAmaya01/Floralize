@@ -6,7 +6,7 @@ namespace FBackend.Models
     public class Producto
     {
         [Key]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         [Required, StringLength(100)]
         public string Nombre { get; set; }
@@ -26,8 +26,9 @@ namespace FBackend.Models
         public int Stock { get; set; }
 
         [ForeignKey("Proveedor")]
-        public int ProveedorId { get; set; }
+        public Guid ProveedorId { get; set; }
 
-        public virtual Proveedores Proveedores { get; set; }
+
+        public virtual Proveedores Proveedor { get; set; }
     }
 }

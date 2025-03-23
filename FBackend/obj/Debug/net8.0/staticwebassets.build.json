@@ -1,12 +1,11 @@
 {
   "Version": 1,
-  "Hash": "erf0GNzxlGqBHKoLlz/Y+BLQbil/vSEzd+vKKXIMEXI=",
+  "Hash": "bpcV8U7h1cDQFqxnH7xLP3Pcv8fFY7uR2QPi0pef9jI=",
   "Source": "FBackend",
   "BasePath": "_content/FBackend",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
+  "Assets": []
 }
