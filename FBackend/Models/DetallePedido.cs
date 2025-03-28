@@ -8,11 +8,17 @@ namespace FBackend.Models
         [Key]
         public Guid Id { get; set; }
 
-        [Required, ForeignKey("Pedido")]
+        [Required]
         public Guid PedidoId { get; set; }
 
-        [Required, ForeignKey("Producto")]
+        [ForeignKey("PedidoId")]
+        public virtual Pedido Pedido { get; set; }
+
+        [Required]
         public Guid ProductoId { get; set; }
+
+        [ForeignKey("ProductoId")]
+        public virtual Producto Producto { get; set; }
 
         [Required]
         public int Cantidad { get; set; }
@@ -23,7 +29,7 @@ namespace FBackend.Models
         [Required, Column(TypeName = "decimal(18,2)")]
         public decimal Total { get; set; }
 
-        public virtual Pedidos Pedidos { get; set; }
-        public virtual Producto Producto { get; set; }
+        
     }
+
 }

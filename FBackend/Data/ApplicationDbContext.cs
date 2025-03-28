@@ -15,7 +15,7 @@ public class ApplicationDbContext : DbContext
     public DbSet<Usuario> Usuarios { get; set; }
     public DbSet<Proveedores> Proveedores { get; set; }
     public DbSet<Producto> Productos { get; set; }
-    public DbSet<Pedidos> Pedidos { get; set; }
+    public DbSet<Pedido> Pedidos { get; set; }
     public DbSet<Inventario> Inventario { get; set; }
     public DbSet<DetallePedido> DetallePedidos { get; set; }
 
@@ -30,7 +30,7 @@ public class ApplicationDbContext : DbContext
 
         // Relación uno a muchos entre Pedido y DetallePedido
         modelBuilder.Entity<DetallePedido>()
-            .HasOne(dp => dp.Pedidos)
+            .HasOne(dp => dp.Pedido)
             .WithMany(p => p.Detalles)
             .HasForeignKey(dp => dp.PedidoId)
             .OnDelete(DeleteBehavior.Cascade);

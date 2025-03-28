@@ -7,8 +7,8 @@ namespace FBackend.Services.Interfaces
     public interface IProveedorService
     {
         Task<ResponseDto<ProveedorDto>> CreateProveedor(ProveedorCreateDto proveedorCreateDto);
-        Task<ResponseDto<ProveedorDto>> DeleteProveedor(int id);
-        Task<ResponseDto<ProveedorDto>> GetProveedorById(int id);
+        Task<ResponseDto<ProveedorDto>> DeleteProveedor(Guid id);
+        Task<ResponseDto<ProveedorDto>> GetProveedorById(Guid id);
         Task<ResponseDto<List<ProveedorDto>>> GetProveedores();
     }
 }

@@ -98,14 +98,6 @@ namespace FBackend.Services
             };
         }
 
-        public Task<ResponseDto<ProveedorDto>> DeleteProveedor(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<ResponseDto<ProveedorDto>> GetProveedorById(int id)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

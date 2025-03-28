@@ -3,24 +3,27 @@ using System.ComponentModel.DataAnnotations;
 
 namespace FBackend.Models
 {
-    public class Pedidos
+    public class Pedido
     {
         [Key]
         public Guid Id { get; set; }
 
-        [Required, ForeignKey("Cliente")]
+        [Required]
         public Guid ClienteId { get; set; }
 
-        [Required]
-        public DateTime FechaPedido { get; set; }
+        [ForeignKey("ClienteId")]
+        public virtual User Cliente { get; set; }
 
-        [Required, StringLength(20)]
-        public string Estado { get; set; }
+        [Required]
+        public DateTime FechaPedido { get; set; } = DateTime.UtcNow;
+
+        [Required]
+        public string Estado { get; set; } = "Pendiente";
 
         [Required, Column(TypeName = "decimal(18,2)")]
-        public decimal Total { get; set; }
+        public decimal Total { get; set; } = 0; // Se calculará automáticamente
 
-        public virtual User Cliente { get; set; }
-        public virtual List<DetallePedido> Detalles { get; set; } = new List<DetallePedido>();
+        public virtual ICollection<DetallePedido> Detalles { get; set; }
     }
+
 }

@@ -23,7 +23,7 @@ namespace FBackend.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetProveedorById(int id)
+        public async Task<IActionResult> GetProveedorById(Guid id)
         {
             var response = await _proveedorService.GetProveedorById(id);
             return StatusCode(response.StatusCode, response);
@@ -37,7 +37,7 @@ namespace FBackend.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteProveedor(int id)
+        public async Task<IActionResult> DeleteProveedor(Guid id)
         {
             var response = await _proveedorService.DeleteProveedor(id);
             return StatusCode(response.StatusCode, response);
