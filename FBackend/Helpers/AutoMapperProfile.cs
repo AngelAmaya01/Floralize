@@ -33,6 +33,8 @@ namespace FBackend.Helpers
             CreateMap<DetallePedido, PedidosDto>();
             CreateMap<PedidoCreateDto, Pedido>();
             CreateMap<Pedido, PedidosDto>();
+            CreateMap<PersonalizadoCreateDto, Personalizado>();
+            CreateMap<Personalizado, PersonalizadoDto>();
             
         }
     }

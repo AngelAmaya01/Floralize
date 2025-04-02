@@ -43,6 +43,7 @@ public class Startup
         services.AddTransient<IProductoService, ProductoService>();
         services.AddTransient<IDetallePedidoService, DetallePedidoService>();
         services.AddTransient<IPedidoService, PedidoService>();
+        services.AddTransient<IPersonalizadoService, PersonalizadoService>();
 
         //mapper
         services.AddAutoMapper(typeof(Startup));
