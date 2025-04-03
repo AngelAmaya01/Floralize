@@ -72,6 +72,8 @@ namespace FBackend.Services
                     Cantidad = model.Cantidad,
                     IncluirPresente = model.IncluirPresente,
                     IncluirBase = model.IncluirBase,
+                    TipoPresente = model.TipoPresente,
+                    TipoBase = model.TipoBase,
                     FotoReferenciaURL = uploadResult.SecureUrl.AbsoluteUri,
                     UserId = model.UserId
                     

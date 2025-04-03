@@ -19,6 +19,9 @@ namespace FBackend.Models.ValidationsDto
         [StringLength(2, ErrorMessage = "El campo IncluirBase solo puede tener 3 caracteres.")]
         public string IncluirBase { get; set; }
 
+        public string TipoPresente { get; set; } 
+        public string TipoBase { get; set; }
+
         public IFormFile File { get; set; }
 
         [Required(ErrorMessage = "El ID del usuario es obligatorio.")]
