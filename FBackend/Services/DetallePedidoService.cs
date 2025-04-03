@@ -119,6 +119,47 @@ namespace FBackend.Services
             }
         }
 
+        //obtener un detalle por id de usurio
+        public async Task<ResponseDto<List<DetallePedidoDto>>> ObtenerDetallesPorCliente(Guid clienteId)
+        {
+            try
+            {
+                var pedidos = await _context.Pedidos
+                    .Where(p => p.ClienteId == clienteId) // Filtrar pedidos del cliente
+                    .SelectMany(p => p.Detalles) // Obtener los detalles de esos pedidos
+                    .Include(d => d.Producto) // Incluir el producto
+                    .ToListAsync();
+
+                var detallesDto = pedidos.Select(d => new DetallePedidoDto
+                {
+                    Id = d.Id,
+                    PedidoId = d.PedidoId,
+                    ProductoId = d.ProductoId,
+                    Cantidad = d.Cantidad,
+                    PrecioUnitario = d.PrecioUnitario,
+                    Total = d.Total,
+                    ProductoNombre = d.Producto.Nombre // Agregar nombre del producto
+                }).ToList();
+
+                return new ResponseDto<List<DetallePedidoDto>>
+                {
+                    Status = true,
+                    Message = "Detalles de pedido obtenidos correctamente",
+                    Data = detallesDto
+                };
+            }
+            catch (Exception e)
+            {
+                return new ResponseDto<List<DetallePedidoDto>>
+                {
+                    Status = false,
+                    Message = $"Error al obtener los detalles del pedido: {e.Message}",
+                    Data = null
+                };
+            }
+        }
+
+
 
     }
 }

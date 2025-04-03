@@ -61,5 +61,17 @@ namespace FBackend.Controllers
             }
         }
 
+        [HttpGet("cliente/{clienteId}")]
+        public async Task<IActionResult> ObtenerDetallesPorCliente(Guid clienteId)
+        {
+            var response = await _detallePedidoService.ObtenerDetallesPorCliente(clienteId);
+
+            if (!response.Status)
+                return BadRequest(response);
+
+            return Ok(response);
+        }
+
+
     }
 }
