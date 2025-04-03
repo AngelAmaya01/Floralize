@@ -5,7 +5,7 @@
 namespace FBackend.Migrations
 {
     /// <inheritdoc />
-    public partial class includeOrderPersonalizado : Migration
+    public partial class arge : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

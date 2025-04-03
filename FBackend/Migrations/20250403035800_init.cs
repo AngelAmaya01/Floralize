@@ -80,15 +80,14 @@ namespace FBackend.Migrations
                     Categoria = table.Column<string>(type: "character varying(50)", maxLength: 50, nullable: false),
                     ImagenUrl = table.Column<string>(type: "text", nullable: false),
                     Stock = table.Column<int>(type: "integer", nullable: false),
-                    ProveedorId = table.Column<Guid>(type: "uuid", nullable: false),
-                    ProveedoresId = table.Column<Guid>(type: "uuid", nullable: false)
+                    ProveedorId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Productos", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Productos_Proveedores_ProveedoresId",
-                        column: x => x.ProveedoresId,
+                        name: "FK_Productos_Proveedores_ProveedorId",
+                        column: x => x.ProveedorId,
                         principalTable: "Proveedores",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -101,7 +100,7 @@ namespace FBackend.Migrations
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     ClienteId = table.Column<Guid>(type: "uuid", nullable: false),
                     FechaPedido = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    Estado = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: false),
+                    Estado = table.Column<string>(type: "text", nullable: false),
                     Total = table.Column<decimal>(type: "numeric(18,2)", nullable: false)
                 },
                 constraints: table =>
@@ -110,6 +109,31 @@ namespace FBackend.Migrations
                     table.ForeignKey(
                         name: "FK_Pedidos_Users_ClienteId",
                         column: x => x.ClienteId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Personalizados",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    TipoFlor = table.Column<string>(type: "text", nullable: false),
+                    Cantidad = table.Column<string>(type: "text", nullable: false),
+                    IncluirPresente = table.Column<string>(type: "text", nullable: false),
+                    IncluirBase = table.Column<string>(type: "text", nullable: false),
+                    TipoPresente = table.Column<string>(type: "text", nullable: false),
+                    TipoBase = table.Column<string>(type: "text", nullable: false),
+                    FotoReferenciaURL = table.Column<string>(type: "text", nullable: false),
+                    UserId = table.Column<Guid>(type: "uuid", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Personalizados", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Personalizados_Users_UserId",
+                        column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -240,9 +264,14 @@ namespace FBackend.Migrations
                 column: "ClienteId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Productos_ProveedoresId",
+                name: "IX_Personalizados_UserId",
+                table: "Personalizados",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Productos_ProveedorId",
                 table: "Productos",
-                column: "ProveedoresId");
+                column: "ProveedorId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Roles_UsuarioId",
@@ -263,6 +292,9 @@ namespace FBackend.Migrations
 
             migrationBuilder.DropTable(
                 name: "Inventario");
+
+            migrationBuilder.DropTable(
+                name: "Personalizados");
 
             migrationBuilder.DropTable(
                 name: "UserRoles");

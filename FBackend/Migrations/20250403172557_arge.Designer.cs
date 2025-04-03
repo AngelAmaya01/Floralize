@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace FBackend.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250328224026_pedidosmodificado")]
-    partial class pedidosmodificado
+    [Migration("20250403172557_arge")]
+    partial class arge
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -106,6 +106,50 @@ namespace FBackend.Migrations
                     b.HasIndex("ClienteId");
 
                     b.ToTable("Pedidos");
+                });
+
+            modelBuilder.Entity("FBackend.Models.Personalizado", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Cantidad")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("FotoReferenciaURL")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("IncluirBase")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("IncluirPresente")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("TipoBase")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("TipoFlor")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("TipoPresente")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Personalizados");
                 });
 
             modelBuilder.Entity("FBackend.Models.Producto", b =>
@@ -370,13 +414,24 @@ namespace FBackend.Migrations
 
             modelBuilder.Entity("FBackend.Models.Pedido", b =>
                 {
-                    b.HasOne("FBackend.Models.Usuario", "Cliente")
+                    b.HasOne("FBackend.Models.User", "Cliente")
                         .WithMany()
                         .HasForeignKey("ClienteId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Cliente");
+                });
+
+            modelBuilder.Entity("FBackend.Models.Personalizado", b =>
+                {
+                    b.HasOne("FBackend.Models.User", "ClienteId")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ClienteId");
                 });
 
             modelBuilder.Entity("FBackend.Models.Producto", b =>

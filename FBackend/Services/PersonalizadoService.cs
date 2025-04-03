@@ -76,7 +76,7 @@ namespace FBackend.Services
                     TipoBase = model.TipoBase,
                     FotoReferenciaURL = uploadResult.SecureUrl.AbsoluteUri,
                     UserId = model.UserId
-                    
+
                 };
 
                 _context.Personalizados.Add(personalizado);
@@ -102,6 +102,87 @@ namespace FBackend.Services
                 };
             }
 
+        }
+
+        //obtener todos los pedidos personalizados por id de usuario
+        public async Task<ResponseDto<List<PersonalizadoDto>>> ObtenerPedidosPorCliente(string clienteId)
+        {
+            try
+            {
+                if (!Guid.TryParse(clienteId, out Guid parsedClienteId))
+                {
+                    return new ResponseDto<List<PersonalizadoDto>>
+                    {
+                        Status = false,
+                        StatusCode = 400,
+                        Message = "Formato de ID de cliente inválido"
+                    };
+                }
+
+                var pedidos = await _context.Personalizados
+                    .Where(p => p.UserId == parsedClienteId) // ✅ Cambio aquí
+                    .ToListAsync();
+
+                var pedidosDto = _mapper.Map<List<PersonalizadoDto>>(pedidos);
+
+                return new ResponseDto<List<PersonalizadoDto>>
+                {
+                    Status = true,
+                    StatusCode = 200,
+                    Message = "Lista de pedidos personalizados",
+                    Data = pedidosDto
+                };
+            }
+            catch (Exception e)
+            {
+                return new ResponseDto<List<PersonalizadoDto>>
+                {
+                    Status = false,
+                    StatusCode = 500,
+                    Message = $"Error al obtener los pedidos personalizados: {e.InnerException?.Message ?? e.Message}"
+                };
+            }
+        }
+
+
+
+
+        //obtener un pedido personalizado por id
+        public async Task<ResponseDto<PersonalizadoDto>> ObtenerPedidoPersonalizado(Guid id)
+        {
+            try
+            {
+                var personalizado = await _context.Personalizados.FirstOrDefaultAsync(x => x.Id == id);
+
+                if (personalizado == null)
+                {
+                    return new ResponseDto<PersonalizadoDto>
+                    {
+                        Status = false,
+                        StatusCode = 404,
+                        Message = "Pedido personalizado no encontrado"
+                    };
+                }
+
+                var personalizadoDto = _mapper.Map<PersonalizadoDto>(personalizado);
+
+                return new ResponseDto<PersonalizadoDto>
+                {
+                    Status = true,
+                    StatusCode = 200,
+                    Message = "Pedido personalizado encontrado",
+                    Data = personalizadoDto
+                };
+            }
+            catch (Exception e)
+            {
+                return new ResponseDto<PersonalizadoDto>
+                {
+                    Status = false,
+                    StatusCode = 500,
+                    Message = $"Error al obtener el pedido personalizado: {e.InnerException?.Message ?? e.Message}"
+                };
+            }
         }
 
         //obtener todos los pedidos personalizados

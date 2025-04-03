@@ -9,6 +9,8 @@ namespace FBackend.Services.Interfaces
         Task<ResponseDto<PersonalizadoDto>> CrearPedidoPersonalizado(PersonalizadoCreateDto model);
         Task<ResponseDto<PersonalizadoDto>> EditarPedidoPersonalizado(Guid id, PersonalizadoCreateDto model);
         Task<ResponseDto<PersonalizadoDto>> EliminarPedidoPersonalizado(Guid id);
+        Task<ResponseDto<PersonalizadoDto>> ObtenerPedidoPersonalizado(Guid id);
+        Task<ResponseDto<List<PersonalizadoDto>>> ObtenerPedidosPorCliente(string clienteId);
         Task<ResponseDto<List<PersonalizadoDto>>> ObtenerPedidosPersonalizados();
     }
 }

@@ -47,6 +47,35 @@ namespace FBackend.Controllers
                 return StatusCode(500, e.Message);
             }
         }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> ObtenerPedidoPersonalizado(Guid id)
+        {
+            try
+            {
+                var response = await _personalizadoService.ObtenerPedidoPersonalizado(id);
+
+                if (response.Status)
+                {
+                    return Ok(response);
+                }
+                else
+                {
+                    return BadRequest(response);
+                }
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+        }
+
+        [HttpGet("cliente/{clienteId}")]
+        public async Task<IActionResult> ObtenerPedidosPorCliente(Guid clienteId)
+        {
+            var response = await _personalizadoService.ObtenerPedidosPorCliente(clienteId.ToString()); // ✅ Conversión a string
+            return StatusCode(response.StatusCode, response);
+        }
+
 
         [HttpGet]
         public async Task<IActionResult> ObtenerPedidosPersonalizados()

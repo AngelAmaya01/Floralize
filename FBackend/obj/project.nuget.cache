@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AekJiaHw/9HTrina0OjNgZR6SsL5NvOxOBM1YOy7h0+7Ri98073MaWCpW/DmkGbWo4s4HSjrtRK/J9kqBh2l/Q==",
+  "dgSpecHash": "Mm3Kc4iIM+nuyIaS8WTbaB4iVbMhm5lQxB9WjkDBzQrSyfMvgJmwiXwFAR6JZtJ8R2PujeTPd6LMxz7dlUUIuw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\OneDrive\\fotos\\Documentos\\1 PAC 2025\\Proyecto Floralize\\Floralize\\FBackend\\FBackend.csproj",
+  "projectFilePath": "C:\\Users\\Usuario\\source\\repos\\Floralize\\FBackend\\FBackend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
