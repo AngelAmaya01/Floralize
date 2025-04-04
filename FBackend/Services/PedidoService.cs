@@ -51,6 +51,16 @@ namespace FBackend.Services
                             Message = $"Producto con ID {item.ProductoId} no encontrado"
                         };
                     }
+                    //verificar stock disponible
+                    if (producto.Stock < item.Cantidad)
+                        return new ResponseDto<PedidosDto>
+                        {
+                            Status = false,
+                            StatusCode = 400,
+                            Message = $"Stock insuficiente para el producto {producto.Nombre}"
+                        };
+                    //actualizar stock
+                    producto.Stock -= item.Cantidad;
 
                     decimal subtotal = item.Cantidad * producto.Precio;
                     totalPedido += subtotal;
@@ -95,15 +105,11 @@ namespace FBackend.Services
 
         public async Task<ResponseDto<IEnumerable<PedidosDto>>> ObtenerTodos()
         {
-            var pedidos = await _context.Pedidos.ToListAsync();
-            var pedidosDto = pedidos.Select(p => new PedidosDto
-            {
-                Id = p.Id,
-                ClienteId = p.ClienteId,
-                FechaPedido = p.FechaPedido,
-                Estado = p.Estado,
-                Total = p.Total
-            });
+            var pedidos = await _context.Pedidos
+             .Include(p => p.Cliente) 
+            .ToListAsync();
+
+            var pedidosDto = _mapper.Map<List<PedidosDto>>(pedidos);
 
             return new ResponseDto<IEnumerable<PedidosDto>>
             {
@@ -164,7 +170,6 @@ namespace FBackend.Services
             var pedidoDto = new PedidosDto
             {
                 Id = pedido.Id,
-                ClienteId = pedido.ClienteId,
                 FechaPedido = pedido.FechaPedido,
                 Estado = pedido.Estado,
                 Total = pedido.Total

@@ -14,8 +14,9 @@ namespace FBackend.Helpers
         {
             MapsForTasks();
             // Mapea Pedido a PedidoDto
-            CreateMap<Pedido, PedidosDto>()
-                .ForMember(dest => dest.ClienteId, opt => opt.MapFrom(src => src.Cliente))
+            CreateMap<Pedido, PedidosDto>();
+                CreateMap<Pedido, PedidosDto>()
+            .ForMember(dest => dest.ClienteNombre, opt => opt.MapFrom(src => src.Cliente.FirstName))
                 .ForMember(dest => dest.Detalles, opt => opt.MapFrom(src => src.Detalles));
 
             // Mapea DetallePedido a DetallePedidoDto
@@ -35,7 +36,12 @@ namespace FBackend.Helpers
             CreateMap<Pedido, PedidosDto>();
             CreateMap<PersonalizadoCreateDto, Personalizado>();
             CreateMap<Personalizado, PersonalizadoDto>();
-            
+            CreateMap<CategoriaCreateDto, Categoria>();
+            CreateMap<Categoria, CategoriaDto>();
+            CreateMap<InventarioCreateDtos, Inventario>();
+            CreateMap<Inventario, InventarioDto>()
+            .ForMember(dest => dest.CategoriaNombre, opt => opt.MapFrom(src => src.Categoria.Descripcion));
+
         }
     }
 }

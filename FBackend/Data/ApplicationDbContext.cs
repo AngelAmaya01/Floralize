@@ -19,6 +19,8 @@ public class ApplicationDbContext : DbContext
     public DbSet<Inventario> Inventario { get; set; }
     public DbSet<DetallePedido> DetallePedidos { get; set; }
     public DbSet<Personalizado> Personalizados { get; set; }
+    public DbSet<Categoria> Categoria { get; set; }
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

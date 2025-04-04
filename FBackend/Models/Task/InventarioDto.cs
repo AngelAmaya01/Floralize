@@ -7,14 +7,12 @@ namespace FBackend.Models.Task
     {
         public Guid Id { get; set; }
 
-        public int ProductoId { get; set; }
+        public string Nombre { get; set; }
 
         public int Cantidad { get; set; }
 
         public string Ubicacion { get; set; }
 
-        public DateTime FechaActualizacion { get; set; }
-
-        public virtual Producto Producto { get; set; }
+        public string CategoriaNombre { get; set; }
     }
 }

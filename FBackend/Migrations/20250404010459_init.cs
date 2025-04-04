@@ -14,6 +14,18 @@ namespace FBackend.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Categoria",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Descripcion = table.Column<string>(type: "character varying(150)", maxLength: 150, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Categoria", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Proveedores",
                 columns: table => new
                 {
@@ -67,6 +79,27 @@ namespace FBackend.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Usuarios", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Inventario",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Nombre = table.Column<string>(type: "text", nullable: false),
+                    Cantidad = table.Column<int>(type: "integer", nullable: false),
+                    Ubicacion = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    CategoriaId = table.Column<Guid>(type: "uuid", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Inventario", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Inventario_Categoria_CategoriaId",
+                        column: x => x.CategoriaId,
+                        principalTable: "Categoria",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -159,27 +192,6 @@ namespace FBackend.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Inventario",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    ProductoId = table.Column<Guid>(type: "uuid", nullable: false),
-                    Cantidad = table.Column<int>(type: "integer", nullable: false),
-                    Ubicacion = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
-                    FechaActualizacion = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Inventario", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Inventario_Productos_ProductoId",
-                        column: x => x.ProductoId,
-                        principalTable: "Productos",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "DetallePedidos",
                 columns: table => new
                 {
@@ -254,9 +266,9 @@ namespace FBackend.Migrations
                 column: "ProductoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Inventario_ProductoId",
+                name: "IX_Inventario_CategoriaId",
                 table: "Inventario",
-                column: "ProductoId");
+                column: "CategoriaId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Pedidos_ClienteId",
@@ -304,6 +316,9 @@ namespace FBackend.Migrations
 
             migrationBuilder.DropTable(
                 name: "Productos");
+
+            migrationBuilder.DropTable(
+                name: "Categoria");
 
             migrationBuilder.DropTable(
                 name: "Roles");

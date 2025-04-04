@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace FBackend.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250403035800_init")]
+    [Migration("20250404010459_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -24,6 +24,22 @@ namespace FBackend.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
+
+            modelBuilder.Entity("FBackend.Models.Categoria", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("character varying(150)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categoria");
+                });
 
             modelBuilder.Entity("FBackend.Models.DetallePedido", b =>
                 {
@@ -64,11 +80,12 @@ namespace FBackend.Migrations
                     b.Property<int>("Cantidad")
                         .HasColumnType("integer");
 
-                    b.Property<DateTime>("FechaActualizacion")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<Guid>("ProductoId")
+                    b.Property<Guid>("CategoriaId")
                         .HasColumnType("uuid");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<string>("Ubicacion")
                         .IsRequired()
@@ -77,7 +94,7 @@ namespace FBackend.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductoId");
+                    b.HasIndex("CategoriaId");
 
                     b.ToTable("Inventario");
                 });
@@ -403,13 +420,13 @@ namespace FBackend.Migrations
 
             modelBuilder.Entity("FBackend.Models.Inventario", b =>
                 {
-                    b.HasOne("FBackend.Models.Producto", "Producto")
+                    b.HasOne("FBackend.Models.Categoria", "Categoria")
                         .WithMany()
-                        .HasForeignKey("ProductoId")
+                        .HasForeignKey("CategoriaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Producto");
+                    b.Navigation("Categoria");
                 });
 
             modelBuilder.Entity("FBackend.Models.Pedido", b =>
