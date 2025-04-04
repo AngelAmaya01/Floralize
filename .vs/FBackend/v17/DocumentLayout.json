@@ -1,9 +1,57 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Usuario\\source\\repos\\Floralize\\",
+  "WorkspaceRootPath": "C:\\ProyectoFlores\\FBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\users\\usuario\\source\\repos\\floralize\\fbackend\\models\\pedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\controllers\\productocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\services\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\services\\productoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\models\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\services\\categoriaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\services\\categoriaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\services\\interfaces\\icategoriaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\services\\interfaces\\icategoriaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\controllers\\inventariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\controllers\\inventariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\models\\pedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\models\\pedidos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,25 +62,173 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Controllers\\RoleController.cs",
+              "RelativeDocumentMoniker": "FBackend\\Controllers\\RoleController.cs",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "FBackend\\Controllers\\RoleController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAQwFYAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T19:23:09.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "FBackend\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "FBackend\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAALgAAAAAAAAAAADwvwwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T19:22:59.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductoController.cs",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Controllers\\ProductoController.cs",
+              "RelativeDocumentMoniker": "FBackend\\Controllers\\ProductoController.cs",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Controllers\\ProductoController.cs",
+              "RelativeToolTip": "FBackend\\Controllers\\ProductoController.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAFQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T19:09:09.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductoService.cs",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Services\\ProductoService.cs",
+              "RelativeDocumentMoniker": "FBackend\\Services\\ProductoService.cs",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Services\\ProductoService.cs",
+              "RelativeToolTip": "FBackend\\Services\\ProductoService.cs",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAowHYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T19:08:16.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Producto.cs",
+              "RelativeDocumentMoniker": "FBackend\\Models\\Producto.cs",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Producto.cs",
+              "RelativeToolTip": "FBackend\\Models\\Producto.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T19:08:02.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Inventario.cs",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Inventario.cs",
+              "RelativeDocumentMoniker": "FBackend\\Models\\Inventario.cs",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Inventario.cs",
+              "RelativeToolTip": "FBackend\\Models\\Inventario.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T18:48:57.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ICategoriaService.cs",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Services\\Interfaces\\ICategoriaService.cs",
+              "RelativeDocumentMoniker": "FBackend\\Services\\Interfaces\\ICategoriaService.cs",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Services\\Interfaces\\ICategoriaService.cs",
+              "RelativeToolTip": "FBackend\\Services\\Interfaces\\ICategoriaService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T18:30:37.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CategoriaService.cs",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Services\\CategoriaService.cs",
+              "RelativeDocumentMoniker": "FBackend\\Services\\CategoriaService.cs",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Services\\CategoriaService.cs",
+              "RelativeToolTip": "FBackend\\Services\\CategoriaService.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAkwFYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T18:29:57.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Categoria.cs",
+              "RelativeDocumentMoniker": "FBackend\\Models\\Categoria.cs",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Categoria.cs",
+              "RelativeToolTip": "FBackend\\Models\\Categoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T18:23:35.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CategoriaController.cs",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Controllers\\CategoriaController.cs",
+              "RelativeDocumentMoniker": "FBackend\\Controllers\\CategoriaController.cs",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Controllers\\CategoriaController.cs",
+              "RelativeToolTip": "FBackend\\Controllers\\CategoriaController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAhwDIAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T17:50:14.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "InventarioController.cs",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Controllers\\InventarioController.cs",
+              "RelativeDocumentMoniker": "FBackend\\Controllers\\InventarioController.cs",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Controllers\\InventarioController.cs",
+              "RelativeToolTip": "FBackend\\Controllers\\InventarioController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAQwDcAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T17:49:26.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "FBackend\\appsettings.Development.json",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\appsettings.Development.json",
+              "RelativeToolTip": "FBackend\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-04T17:04:34.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Pedidos.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\Floralize\\FBackend\\Models\\Pedidos.cs",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Pedidos.cs",
               "RelativeDocumentMoniker": "FBackend\\Models\\Pedidos.cs",
-              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\Floralize\\FBackend\\Models\\Pedidos.cs",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Pedidos.cs",
               "RelativeToolTip": "FBackend\\Models\\Pedidos.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T17:26:55.267Z",
               "EditorCaption": ""

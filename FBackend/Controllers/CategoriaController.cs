@@ -36,7 +36,7 @@ namespace FBackend.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> EditarCategoria(int id, [FromBody] CategoriaCreateDto model)
+        public async Task<IActionResult> EditarCategoria(Guid id, [FromBody] CategoriaCreateDto model)
         {
             if (model == null)
             {
@@ -48,7 +48,7 @@ namespace FBackend.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> EliminarCategoria(int id)
+        public async Task<IActionResult> EliminarCategoria(Guid id)
         {
             var response = await _categoriaService.EliminarCategoria(id);
             return response.Status ? Ok(response) : StatusCode(response.StatusCode, response);

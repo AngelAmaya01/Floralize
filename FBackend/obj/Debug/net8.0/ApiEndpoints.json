@@ -64,6 +64,548 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FBackend.Controllers.CategoriaController",
+    "Method": "CrearCategoria",
+    "RelativePath": "api/categoria",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "FBackend.Models.ValidationsDto.CategoriaCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.CategoriaController",
+    "Method": "ObtenerCategorias",
+    "RelativePath": "api/categoria",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.CategoriaController",
+    "Method": "EditarCategoria",
+    "RelativePath": "api/categoria/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "FBackend.Models.ValidationsDto.CategoriaCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.CategoriaController",
+    "Method": "EliminarCategoria",
+    "RelativePath": "api/categoria/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.DetallePedidoController",
+    "Method": "ObtenerPedidos",
+    "RelativePath": "api/Detalle",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.DetallePedidoController",
+    "Method": "ObtenerDetallesPorPedido",
+    "RelativePath": "api/Detalle/{pedidoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pedidoId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.DetallePedidoController",
+    "Method": "ObtenerDetallesPorCliente",
+    "RelativePath": "api/Detalle/cliente/{clienteId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clienteId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.InventarioController",
+    "Method": "AgregarProducto",
+    "RelativePath": "api/Inventario",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "FBackend.Models.DTOs.PedidosDtos.InventarioCreateDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.InventarioController",
+    "Method": "ObtenerProductos",
+    "RelativePath": "api/Inventario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.InventarioController",
+    "Method": "EditarProducto",
+    "RelativePath": "api/Inventario/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "FBackend.Models.DTOs.PedidosDtos.InventarioCreateDtos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.InventarioController",
+    "Method": "EliminarProducto",
+    "RelativePath": "api/Inventario/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.PedidoController",
+    "Method": "CrearPedido",
+    "RelativePath": "api/pedido",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "FBackend.Models.DTOs.PedidosDtos.PedidoCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.PedidoController",
+    "Method": "ObtenerTodos",
+    "RelativePath": "api/pedido",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.PedidoController",
+    "Method": "ObtenerPorId",
+    "RelativePath": "api/pedido/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.PersonalizadoController",
+    "Method": "CrearPedidoPersonalizado",
+    "RelativePath": "api/personalido",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TipoFlor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cantidad",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IncluirPresente",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IncluirBase",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TipoPresente",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TipoBase",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.PersonalizadoController",
+    "Method": "ObtenerPedidosPersonalizados",
+    "RelativePath": "api/personalido",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.PersonalizadoController",
+    "Method": "ObtenerPedidoPersonalizado",
+    "RelativePath": "api/personalido/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.PersonalizadoController",
+    "Method": "EditarPedidoPersonalizado",
+    "RelativePath": "api/personalido/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "TipoFlor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Cantidad",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IncluirPresente",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IncluirBase",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TipoPresente",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TipoBase",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.PersonalizadoController",
+    "Method": "EliminarPedidoPersonalizado",
+    "RelativePath": "api/personalido/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.PersonalizadoController",
+    "Method": "ObtenerPedidosPorCliente",
+    "RelativePath": "api/personalido/cliente/{clienteId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clienteId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.ProductoController",
+    "Method": "CrearProducto",
+    "RelativePath": "api/producto",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Descripcion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Precio",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Categoria",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "File",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Stock",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "ProveedorId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.ProductoController",
+    "Method": "ObtenerProductos",
+    "RelativePath": "api/producto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.ProductoController",
+    "Method": "ObtenerProductoPorId",
+    "RelativePath": "api/producto/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.ProductoController",
+    "Method": "ActualizarProducto",
+    "RelativePath": "api/producto/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "FBackend.Models.DTOs.ProductoUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.ProductoController",
+    "Method": "EliminarProducto",
+    "RelativePath": "api/producto/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.ProveedorController",
+    "Method": "CreateProveedor",
+    "RelativePath": "api/proveedor",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "proveedorCreateDto",
+        "Type": "FBackend.Models.ValidationsDto.ProveedorCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.ProveedorController",
+    "Method": "GetProveedores",
+    "RelativePath": "api/proveedor",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.ProveedorController",
+    "Method": "GetProveedorById",
+    "RelativePath": "api/proveedor/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.ProveedorController",
+    "Method": "DeleteProveedor",
+    "RelativePath": "api/proveedor/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "DentalAPI.Controllers.RoleController",
     "Method": "GetRoles",
     "RelativePath": "api/Role",
@@ -83,12 +625,12 @@
     "Parameters": [
       {
         "Name": "userId",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       },
       {
         "Name": "roleId",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],
@@ -104,12 +646,12 @@
     "Parameters": [
       {
         "Name": "userId",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       },
       {
         "Name": "roleId",
-        "Type": "System.Int32",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],

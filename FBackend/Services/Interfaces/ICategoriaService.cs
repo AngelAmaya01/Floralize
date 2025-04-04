@@ -7,8 +7,8 @@ namespace FBackend.Services.Interfaces
     public interface ICategoriaService
     {
         Task<ResponseDto<CategoriaDto>> CrearCategoria(CategoriaCreateDto model);
-        Task<ResponseDto<CategoriaDto>> EditarCategoria(int id, CategoriaCreateDto model);
-        Task<ResponseDto<CategoriaDto>> EliminarCategoria(int id);
+        Task<ResponseDto<CategoriaDto>> EditarCategoria(Guid id, CategoriaCreateDto model);
+        Task<ResponseDto<CategoriaDto>> EliminarCategoria(Guid id);
         Task<ResponseDto<List<CategoriaDto>>> ObtenerCategorias();
     }
 }

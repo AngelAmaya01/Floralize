@@ -57,7 +57,7 @@ namespace FBackend.Services
         }
 
         //editar categoria por id usando el mismo modelo de crear categoria
-        public async Task<ResponseDto<CategoriaDto>> EditarCategoria(int id, CategoriaCreateDto model)
+        public async Task<ResponseDto<CategoriaDto>> EditarCategoria(Guid id, CategoriaCreateDto model)
         {
             var categoria = await _context.Categoria.FindAsync(id);
             if (categoria == null)
@@ -87,7 +87,7 @@ namespace FBackend.Services
         }
 
         //eliminar categoria por id
-        public async Task<ResponseDto<CategoriaDto>> EliminarCategoria(int id)
+        public async Task<ResponseDto<CategoriaDto>> EliminarCategoria(Guid id)
         {
             var categoria = await _context.Categoria.FindAsync(id);
             if (categoria == null)
