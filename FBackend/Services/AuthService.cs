@@ -75,6 +75,7 @@ public class AuthService : IAuthService
         {
             Username = model.Username,
             Email = model.Email,
+            Address = model.Address,
             FirstName = model.FirstName,
             LastName = model.LastName,
             PhoneNumber = model.PhoneNumber,

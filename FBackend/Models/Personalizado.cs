@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FBackend.Models
 {
@@ -12,6 +13,7 @@ namespace FBackend.Models
         public string IncluirBase { get; set; }
         public string TipoPresente { get; set; }
         public string TipoBase { get; set; }
+        public string Estado { get; set; } = "Pendiente";
         public string FotoReferenciaURL { get; set; }
 
         [ForeignKey("ClienteId")]

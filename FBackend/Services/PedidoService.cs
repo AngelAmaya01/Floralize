@@ -105,8 +105,16 @@ namespace FBackend.Services
         public async Task<ResponseDto<IEnumerable<PedidosDto>>> ObtenerTodos()
         {
             var pedidos = await _context.Pedidos
-             .Include(p => p.Cliente) 
-            .ToListAsync();
+             .Include(p => p.Cliente)
+            .Select(p => new PedidosDto
+            {
+                Id = p.Id,
+                FechaPedido = p.FechaPedido,
+                Estado = p.Estado,
+                Total = p.Total,
+                ClienteNombre = p.Cliente.FirstName,
+                Direccion = p.Cliente.Address,
+            }).ToListAsync();
 
             var pedidosDto = _mapper.Map<List<PedidosDto>>(pedidos);
 
@@ -125,18 +133,32 @@ namespace FBackend.Services
             try
             {
                 var pedidos = await _context.Pedidos
-                    .Include(p => p.Cliente)
-                    .Include(p => p.Detalles) // Cargar los detalles del pedido
-                    .ThenInclude(d => d.Producto) // Opcional, si quieres incluir el producto
+                    .Include(p => p.Cliente)  // Asegúrate de incluir el cliente
+                    .Include(p => p.Detalles)
+                        .ThenInclude(d => d.Producto)  // Incluir los productos relacionados
+                    .Select(p => new PedidosDto
+                    {
+                        Id = p.Id,
+                        FechaPedido = p.FechaPedido,
+                        Estado = p.Estado,
+                        Total = p.Total,
+                        ClienteNombre = p.Cliente.FirstName + " " + p.Cliente.LastName,
+                        Detalles = p.Detalles.Select(d => new DetallePedidoDto
+                        {
+                            Id = d.Id,
+                            ProductoNombre = d.Producto.Nombre,
+                            Cantidad = d.Cantidad,
+                            PrecioUnitario = d.PrecioUnitario,
+                            Total = d.Total
+                        }).ToList()
+                    })
                     .ToListAsync();
-
-                var pedidosDto = _mapper.Map<List<PedidosDto>>(pedidos);
 
                 return new ResponseDto<List<PedidosDto>>
                 {
                     Status = true,
                     Message = "Lista de pedidos obtenida correctamente",
-                    Data = pedidosDto
+                    Data = pedidos
                 };
             }
             catch (Exception e)
@@ -149,8 +171,6 @@ namespace FBackend.Services
                 };
             }
         }
-
-
 
         //obtener pedido por id
         public async Task<ResponseDto<PedidosDto>> ObtenerPorId(Guid id)

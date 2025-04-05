@@ -15,6 +15,9 @@ public class User
     public string Email { get; set; }
 
     [Required]
+    public string Address { get; set; }
+
+    [Required]
     public string PasswordHash { get; set; }
 
     [Required]

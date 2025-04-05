@@ -455,6 +455,27 @@
   },
   {
     "ContainingType": "FBackend.Controllers.PersonalizadoController",
+    "Method": "CambiarEstado",
+    "RelativePath": "api/personalido/{id}/estado",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "FBackend.Controllers.PedidoController\u002BCambiarEstadoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.PersonalizadoController",
     "Method": "ObtenerPedidosPorCliente",
     "RelativePath": "api/personalido/cliente/{clienteId}",
     "HttpMethod": "GET",

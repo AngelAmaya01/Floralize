@@ -613,6 +613,48 @@
         }
       }
     },
+    "/api/personalido/{id}/estado": {
+      "put": {
+        "tags": [
+          "Personalizado"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CambiarEstadoDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CambiarEstadoDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CambiarEstadoDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/personalido/{id}": {
       "get": {
         "tags": [
@@ -1325,6 +1367,7 @@
       },
       "RegisterDto": {
         "required": [
+          "address",
           "email",
           "firstName",
           "lastName",
@@ -1342,6 +1385,10 @@
             "minLength": 1,
             "type": "string",
             "format": "email"
+          },
+          "address": {
+            "minLength": 1,
+            "type": "string"
           },
           "password": {
             "minLength": 6,

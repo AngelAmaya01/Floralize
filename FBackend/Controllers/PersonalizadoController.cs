@@ -1,7 +1,10 @@
-﻿using FBackend.Models.ValidationsDto;
+﻿using ApiCitaOdon.Data;
+using FBackend.Models.ValidationsDto;
 using FBackend.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using static FBackend.Controllers.PedidoController;
 
 namespace FBackend.Controllers
 {
@@ -10,10 +13,13 @@ namespace FBackend.Controllers
     public class PersonalizadoController : ControllerBase
     {
         private readonly IPersonalizadoService _personalizadoService;
+        private readonly ApplicationDbContext _context;
 
-        public PersonalizadoController(IPersonalizadoService personalizadoService)
+        public PersonalizadoController(IPersonalizadoService personalizadoService,
+            ApplicationDbContext context)
         {
             _personalizadoService = personalizadoService;
+            _context = context;
         }
 
         [HttpPost]
@@ -47,6 +53,24 @@ namespace FBackend.Controllers
                 return StatusCode(500, e.Message);
             }
         }
+
+        [HttpPut("{id}/estado")]
+        public async Task<IActionResult> CambiarEstado(Guid id, [FromBody] CambiarEstadoDto model)
+        {
+            // Cambiar de _context.Pedidos a _context.Personalizados
+            var pedido = await _context.Personalizados.FindAsync(id);
+
+            if (pedido == null)
+            {
+                return NotFound(new { status = false, message = "Pedido personalizado no encontrado" });
+            }
+
+            pedido.Estado = model.Estado;
+            await _context.SaveChangesAsync();
+
+            return Ok(new { status = true, message = "Estado actualizado correctamente" });
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> ObtenerPedidoPersonalizado(Guid id)
         {

@@ -74,6 +74,7 @@ namespace FBackend.Services
                     IncluirBase = model.IncluirBase,
                     TipoPresente = model.TipoPresente,
                     TipoBase = model.TipoBase,
+                    Estado = "Pendiente",
                     FotoReferenciaURL = uploadResult.SecureUrl.AbsoluteUri,
                     UserId = model.UserId
 
@@ -190,7 +191,23 @@ namespace FBackend.Services
         {
             try
             {
-                var personalizados = await _context.Personalizados.ToListAsync();
+                var personalizados = await _context.Personalizados
+                .Include(p => p.ClienteId)
+               .Select(p => new PersonalizadoDto
+               {
+                   Id = p.Id,
+                   nombreCliente = p.ClienteId.FirstName,
+                   Direccion = p.ClienteId.Address,
+                   Telefono = p.ClienteId.PhoneNumber,
+                   TipoFlor = p.TipoFlor,
+                   Cantidad = p.Cantidad,
+                   IncluirPresente = p.IncluirPresente,
+                   IncluirBase = p.IncluirBase,
+                   TipoPresente = p.TipoPresente,
+                   TipoBase = p.TipoBase,
+                   FotoReferenciaURL = p.FotoReferenciaURL,
+                   UserId = p.UserId
+               }).ToListAsync();
                 var personalizadosDto = _mapper.Map<List<PersonalizadoDto>>(personalizados);
 
                 return new ResponseDto<List<PersonalizadoDto>>
