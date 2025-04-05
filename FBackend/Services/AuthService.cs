@@ -27,6 +27,29 @@ public class AuthService : IAuthService
         _emailService = emailService;
     }
 
+    public async Task<IEnumerable<User>> GetAllUsersAsync()
+    {
+        return await _context.Users
+        .Include(u => u.Roles)
+        .Select(u => new User
+        {
+            Id = u.Id,
+            Username = u.Username,
+            Email = u.Email,
+            FirstName = u.FirstName,
+            LastName = u.LastName,
+            PhoneNumber = u.PhoneNumber,
+            CreatedAt = u.CreatedAt,
+            Roles = u.Roles.Select(r => new Role
+            {
+                Id = r.Id,
+                Name = r.Name,
+                Description = r.Description
+            }).ToList()
+        })
+        .ToListAsync();
+    }
+
     public async Task<string> LoginAsync(LoginDto model)
     {
         var user = await _context.Users

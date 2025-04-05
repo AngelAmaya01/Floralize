@@ -34,6 +34,20 @@ public class AuthController : ControllerBase
         _authService = authService;
     }
 
+    [HttpGet("users")]
+    public async Task<IActionResult> GetAllUsers()
+    {
+        try
+        {
+            var users = await _authService.GetAllUsersAsync();
+            return Ok(new { status = true, data = users });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { status = false, message = ex.Message });
+        }
+    }
+
     [HttpPost("register")]
     public async Task<IActionResult> Register(RegisterDto model)
     {

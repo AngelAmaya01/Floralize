@@ -64,6 +64,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ApiCitaOdon.Controllers.AuthController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/Auth/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FBackend.Controllers.CategoriaController",
     "Method": "CrearCategoria",
     "RelativePath": "api/categoria",
@@ -268,6 +278,27 @@
       {
         "Name": "id",
         "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FBackend.Controllers.PedidoController",
+    "Method": "CambiarEstado",
+    "RelativePath": "api/pedido/{id}/estado",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "FBackend.Controllers.PedidoController\u002BCambiarEstadoDto",
         "IsRequired": true
       }
     ],
