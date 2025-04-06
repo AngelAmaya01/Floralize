@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\ProyectoFlores\\FBackend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|c:\\proyectoflores\\fbackend\\fbackend\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2FE182B6-1B2A-433D-8295-7FFCE55B6BF6}|FBackend\\FBackend.csproj|solutionrelative:fbackend\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -30,11 +38,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Startup.cs",
+              "RelativeDocumentMoniker": "FBackend\\Startup.cs",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Startup.cs",
+              "RelativeToolTip": "FBackend\\Startup.cs",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAYwHoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T02:29:17.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "FBackend\\appsettings.Development.json",
+              "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\appsettings.Development.json",
+              "RelativeToolTip": "FBackend\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAADKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-06T02:28:14.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Pedidos.cs",
               "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Pedidos.cs",
               "RelativeDocumentMoniker": "FBackend\\Models\\Pedidos.cs",
@@ -42,12 +76,11 @@
               "RelativeToolTip": "FBackend\\Models\\Pedidos.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAowB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T01:38:17.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T01:38:17.254Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "PedidosDto.cs",
               "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Models\\Task\\PedidosDto.cs",
               "RelativeDocumentMoniker": "FBackend\\Models\\Task\\PedidosDto.cs",
@@ -55,12 +88,11 @@
               "RelativeToolTip": "FBackend\\Models\\Task\\PedidosDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T01:37:37.568Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T01:37:37.568Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "PedidoController.cs",
               "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Controllers\\PedidoController.cs",
               "RelativeDocumentMoniker": "FBackend\\Controllers\\PedidoController.cs",
@@ -68,25 +100,24 @@
               "RelativeToolTip": "FBackend\\Controllers\\PedidoController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAIwDMAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T01:34:51.867Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-06T01:34:51.867Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "EmailService.cs",
               "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Services\\EmailService.cs",
               "RelativeDocumentMoniker": "FBackend\\Services\\EmailService.cs",
               "ToolTip": "C:\\ProyectoFlores\\FBackend\\FBackend\\Services\\EmailService.cs",
               "RelativeToolTip": "FBackend\\Services\\EmailService.cs",
-              "ViewState": "AgIAADYBAAAAAAAAAAAMwEoBAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAALYBAAAAAAAAAAAIwJ8BAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-06T01:16:30.667Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "PersonalizadoService.cs",
               "DocumentMoniker": "C:\\ProyectoFlores\\FBackend\\FBackend\\Services\\PersonalizadoService.cs",
               "RelativeDocumentMoniker": "FBackend\\Services\\PersonalizadoService.cs",

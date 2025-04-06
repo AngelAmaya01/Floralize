@@ -12,6 +12,7 @@ using System.Text;
 public class Startup
 {
     private readonly IConfiguration _configuration;
+    private readonly string _corsPolicy = "CorsPolicy";
 
     public Startup(IConfiguration configuration)
     {
@@ -53,11 +54,12 @@ public class Startup
         // Configuración de CORS
         services.AddCors(options =>
         {
-            options.AddPolicy("FrontendPolicy", policy =>
+            options.AddPolicy(_corsPolicy, builder =>
             {
-                policy.WithOrigins(_configuration["FrontendURL"])
-                      .AllowAnyHeader()
-                      .AllowAnyMethod();
+                builder.AllowAnyOrigin()
+                       .AllowAnyHeader()
+                       .AllowAnyMethod()
+                       .WithExposedHeaders("Content-Disposition");
             });
         });
 
@@ -113,14 +115,12 @@ public class Startup
     // Configuración del middleware
     public void Configure(WebApplication app)
     {
-        if (app.Environment.IsDevelopment())
-        {
-            app.UseSwagger();
-            app.UseSwaggerUI();
-        }
-
+        app.UseSwagger();
+        app.UseExceptionHandler("/error");
+        app.UseHsts();
+        app.UseSwaggerUI();
         app.UseHttpsRedirection();
-        app.UseCors("FrontendPolicy");
+        app.UseCors(_corsPolicy);
         app.UseAuthentication();
         app.UseAuthorization();
         app.MapControllers();
