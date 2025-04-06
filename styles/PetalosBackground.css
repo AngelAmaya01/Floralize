@@ -1,0 +1,101 @@
+.petalos-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Base para todos los pétalos */
+.petalo-rosa {
+  position: absolute;
+  will-change: transform, opacity, top, left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.1s linear; /* Suavizar ligeramente las rotaciones */
+}
+
+/* Variaciones de forma para los pétalos */
+.petalo-tipo-0 {
+  /* Forma de pétalo clásico */
+  border-radius: 70% 20% 50% 30% / 60% 40% 30% 40%;
+}
+
+.petalo-tipo-1 {
+  /* Forma de pétalo más redondeado */
+  border-radius: 60% 40% 55% 45% / 50% 45% 55% 50%;
+}
+
+.petalo-tipo-2 {
+  /* Forma de pétalo más alargado */
+  border-radius: 80% 20% 60% 40% / 70% 30% 40% 30%;
+}
+
+.petalo-tipo-3 {
+  /* Forma de pétalo asimétrico */
+  border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+}
+
+/* Efecto de brillo y textura para los pétalos */
+.petalo-brillo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.3), transparent 50%),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.1) 0%, transparent 40%);
+  opacity: 0.8;
+}
+
+/* Añadir textura sutil a los pétalos */
+.petalo-rosa::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 1px,
+    rgba(255, 255, 255, 0.05) 1px,
+    rgba(255, 255, 255, 0.05) 2px
+  );
+  opacity: 0.3;
+}
+
+/* Añadir sombra suave para dar sensación de profundidad */
+.petalo-rosa::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  box-shadow: inset 1px 1px 1px rgba(255, 255, 255, 0.4),
+              inset -1px -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para efectos de luz al caer */
+@media (prefers-reduced-motion: no-preference) {
+  .petalo-rosa {
+    animation: subtle-float 8s infinite ease-in-out;
+  }
+  
+  @keyframes subtle-float {
+    0%, 100% {
+      filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+    }
+    50% {
+      filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.15));
+    }
+  }
+}
