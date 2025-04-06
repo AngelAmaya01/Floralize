@@ -285,7 +285,7 @@
   },
   {
     "ContainingType": "FBackend.Controllers.PedidoController",
-    "Method": "CambiarEstado",
+    "Method": "ActualizarEstado",
     "RelativePath": "api/pedido/{id}/estado",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -297,8 +297,8 @@
         "IsRequired": true
       },
       {
-        "Name": "model",
-        "Type": "FBackend.Controllers.PedidoController\u002BCambiarEstadoDto",
+        "Name": "request",
+        "Type": "FBackend.Controllers.PedidoController\u002BActualizarEstadoRequest",
         "IsRequired": true
       }
     ],
@@ -455,7 +455,7 @@
   },
   {
     "ContainingType": "FBackend.Controllers.PersonalizadoController",
-    "Method": "CambiarEstado",
+    "Method": "ActualizarEstado",
     "RelativePath": "api/personalido/{id}/estado",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -467,8 +467,8 @@
         "IsRequired": true
       },
       {
-        "Name": "model",
-        "Type": "FBackend.Controllers.PedidoController\u002BCambiarEstadoDto",
+        "Name": "estado",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

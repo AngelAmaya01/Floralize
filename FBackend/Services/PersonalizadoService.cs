@@ -1,4 +1,6 @@
 ﻿using ApiCitaOdon.Data;
+using ApiCitaOdon.Services;
+using ApiCitaOdon.Services.Interfaces;
 using AutoMapper;
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
@@ -18,18 +20,22 @@ namespace FBackend.Services
         private readonly IConfiguration _configuration;
         private readonly IMapper _mapper;
         private readonly Cloudinary _cloudinary;
+        private readonly IEmailService _emailService;
 
-        public PersonalizadoService(ApplicationDbContext context, IConfiguration configuration, IMapper mapper)
+        public PersonalizadoService(ApplicationDbContext context, 
+            IConfiguration configuration, 
+            IMapper mapper,
+            IEmailService emailService)
         {
             _context = context;
             _configuration = configuration;
             _mapper = mapper;
+            _emailService = emailService;
             var cloudinarySettings = new Account(
-            configuration["CloudinaryURL:CloudName"] ?? "",
-            configuration["CloudinaryURL:ApiKey"] ?? "",
-            configuration["CloudinaryURL:ApiSecret"] ?? ""
-        );
-
+                configuration["CloudinaryURL:CloudName"] ?? "",
+                configuration["CloudinaryURL:ApiKey"] ?? "",
+                configuration["CloudinaryURL:ApiSecret"] ?? ""
+            );
             _cloudinary = new Cloudinary(cloudinarySettings);
         }
 
@@ -37,6 +43,17 @@ namespace FBackend.Services
         {
             try
             {
+                var cliente = await _context.Users.FindAsync(model.UserId);
+                if (cliente == null)
+                {
+                    return new ResponseDto<PersonalizadoDto>
+                    {
+                        Status = false,
+                        StatusCode = 404,
+                        Message = "Cliente no encontrado"
+                    };
+                }
+
                 if (model.File == null || model.File.Length == 0)
                 {
                     return new ResponseDto<PersonalizadoDto>
@@ -77,11 +94,13 @@ namespace FBackend.Services
                     Estado = "Pendiente",
                     FotoReferenciaURL = uploadResult.SecureUrl.AbsoluteUri,
                     UserId = model.UserId
-
                 };
 
                 _context.Personalizados.Add(personalizado);
                 await _context.SaveChangesAsync();
+
+                // Enviar correo de confirmación
+                await _emailService.SendCustomOrderConfirmationAsync(personalizado.Id, cliente.Email);
 
                 var personalizadoDto = _mapper.Map<PersonalizadoDto>(personalizado);
 
@@ -102,7 +121,6 @@ namespace FBackend.Services
                     Message = $"Error al guardar el producto: {e.InnerException?.Message ?? e.Message}"
                 };
             }
-
         }
 
         //obtener todos los pedidos personalizados por id de usuario
@@ -144,9 +162,6 @@ namespace FBackend.Services
                 };
             }
         }
-
-
-
 
         //obtener un pedido personalizado por id
         public async Task<ResponseDto<PersonalizadoDto>> ObtenerPedidoPersonalizado(Guid id)
@@ -205,6 +220,7 @@ namespace FBackend.Services
                    IncluirBase = p.IncluirBase,
                    TipoPresente = p.TipoPresente,
                    TipoBase = p.TipoBase,
+                   Estado = p.Estado,
                    FotoReferenciaURL = p.FotoReferenciaURL,
                    UserId = p.UserId
                }).ToListAsync();
@@ -295,6 +311,87 @@ namespace FBackend.Services
                     Status = false,
                     StatusCode = 500,
                     Message = $"Error al actualizar el pedido personalizado: {e.InnerException?.Message ?? e.Message}"
+                };
+            }
+        }
+
+        public async Task<ResponseDto<PersonalizadoDto>> ActualizarEstado(Guid id, string nuevoEstado)
+        {
+            try
+            {
+                var pedido = await _context.Personalizados
+                    .Include(p => p.ClienteId)
+                    .FirstOrDefaultAsync(p => p.Id == id);
+
+                if (pedido == null)
+                {
+                    return new ResponseDto<PersonalizadoDto>
+                    {
+                        Status = false,
+                        StatusCode = 404,
+                        Message = "Pedido no encontrado"
+                    };
+                }
+
+                // Validar y normalizar el estado
+                nuevoEstado = nuevoEstado?.Trim();
+                var estadosValidos = new[] { "Pendiente", "En Proceso", "Completado", "Cancelado" };
+
+                if (string.IsNullOrEmpty(nuevoEstado) || !estadosValidos.Contains(nuevoEstado))
+                {
+                    return new ResponseDto<PersonalizadoDto>
+                    {
+                        Status = false,
+                        StatusCode = 400,
+                        Message = "Estado no válido. Use: Pendiente, En Proceso, Completado o Cancelado"
+                    };
+                }
+
+                var estadoAnterior = pedido.Estado;
+                pedido.Estado = nuevoEstado;
+                pedido.FechaPedido = DateTime.UtcNow;
+
+                await _context.SaveChangesAsync();
+
+                // Enviar correo si el estado cambió a "Completado"
+                if (nuevoEstado == "Completado" && estadoAnterior != "Completado" && pedido.ClienteId != null)
+                {
+                    await _emailService.SendCustomOrderConfirmationAsync(pedido.Id, pedido.ClienteId.Email);
+                }
+
+                var pedidoDto = new PersonalizadoDto
+                {
+                    Id = pedido.Id,
+                    TipoFlor = pedido.TipoFlor,
+                    nombreCliente = pedido.ClienteId?.FirstName + " " + pedido.ClienteId?.LastName,
+                    Direccion = pedido.ClienteId?.Address,
+                    Telefono = pedido.ClienteId?.PhoneNumber,
+                    Cantidad = pedido.Cantidad,
+                    IncluirPresente = pedido.IncluirPresente,
+                    IncluirBase = pedido.IncluirBase,
+                    TipoPresente = pedido.TipoPresente,
+                    TipoBase = pedido.TipoBase,
+                    Estado = pedido.Estado,
+                    FotoReferenciaURL = pedido.FotoReferenciaURL,
+                    UserId = pedido.UserId,
+                    FechaPedido = pedido.FechaPedido
+                };
+
+                return new ResponseDto<PersonalizadoDto>
+                {
+                    Status = true,
+                    StatusCode = 200,
+                    Message = $"Estado actualizado a {nuevoEstado}",
+                    Data = pedidoDto
+                };
+            }
+            catch (Exception e)
+            {
+                return new ResponseDto<PersonalizadoDto>
+                {
+                    Status = false,
+                    StatusCode = 500,
+                    Message = $"Error al actualizar estado: {e.Message}"
                 };
             }
         }

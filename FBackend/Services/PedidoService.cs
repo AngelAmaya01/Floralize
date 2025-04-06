@@ -6,6 +6,8 @@ using FBackend.Models;
 using FBackend.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
+using ApiCitaOdon.Services.Interfaces;
+using FluentEmail.Core;
 
 namespace FBackend.Services
 {
@@ -13,11 +15,13 @@ namespace FBackend.Services
     {
         private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;
+        private readonly IEmailService _emailService;
 
-        public PedidoService(ApplicationDbContext context, IMapper mapper) 
+        public PedidoService(ApplicationDbContext context, IMapper mapper, IEmailService emailService) 
         {
             _context = context;
             _mapper = mapper;
+            _emailService = emailService;
         }
 
         //crear pedido
@@ -26,6 +30,17 @@ namespace FBackend.Services
             using var transaction = await _context.Database.BeginTransactionAsync();
             try
             {
+                var cliente = await _context.Users.FindAsync(model.ClienteId);
+                if (cliente == null)
+                {
+                    return new ResponseDto<PedidosDto>
+                    {
+                        Status = false,
+                        StatusCode = 404,
+                        Message = "Cliente no encontrado"
+                    };
+                }
+
                 var pedido = new Pedido
                 {
                     ClienteId = model.ClienteId,
@@ -81,6 +96,9 @@ namespace FBackend.Services
                 await _context.SaveChangesAsync();
                 await transaction.CommitAsync();
 
+                // Enviar correo de confirmación
+                await _emailService.SendOrderConfirmationAsync(pedido.Id, cliente.Email);
+
                 return new ResponseDto<PedidosDto>
                 {
                     Status = true,
@@ -97,6 +115,73 @@ namespace FBackend.Services
                     Status = false,
                     StatusCode = 500,
                     Message = $"Error al crear pedido: {e.Message}"
+                };
+            }
+        }
+
+        public async Task<ResponseDto<PedidosDto>> ActualizarEstado(Guid id, string nuevoEstado)
+        {
+            try
+            {
+                var pedido = await _context.Pedidos
+                    .Include(p => p.Cliente)
+                    .Include(p => p.Detalles)
+                        .ThenInclude(d => d.Producto)
+                    .FirstOrDefaultAsync(p => p.Id == id);
+
+                if (pedido == null)
+                {
+                    return new ResponseDto<PedidosDto>
+                    {
+                        Status = false,
+                        StatusCode = 404,
+                        Message = "Pedido no encontrado"
+                    };
+                }
+
+                var estadoAnterior = pedido.Estado;
+                pedido.Estado = nuevoEstado;
+
+                await _context.SaveChangesAsync();
+
+                // Enviar correo si el estado cambió a "Completado"
+                if (nuevoEstado == "Completado" && estadoAnterior != "Completado")
+                {
+                    await _emailService.SendOrderReadyEmailAsync(pedido);
+                }
+
+                var pedidoDto = new PedidosDto
+                {
+                    Id = pedido.Id,
+                    Estado = pedido.Estado,
+                    FechaPedido = pedido.FechaPedido,
+                    Total = pedido.Total,
+                    // otras propiedades...
+                    Detalles = pedido.Detalles?.Select(d => new DetallePedidoDto
+                    {
+                        Id = d.Id,
+                        ProductoId = d.ProductoId,
+                        ProductoNombre = d.Producto?.Nombre,
+                        Cantidad = d.Cantidad,
+                        PrecioUnitario = d.PrecioUnitario
+                    }).ToList()
+                };
+
+                return new ResponseDto<PedidosDto>
+                {
+                    Status = true,
+                    StatusCode = 200,
+                    Message = $"Estado del pedido actualizado a {nuevoEstado}",
+                    Data = pedidoDto
+                };
+            }
+            catch (Exception e)
+            {
+                return new ResponseDto<PedidosDto>
+                {
+                    Status = false,
+                    StatusCode = 500,
+                    Message = $"Error al actualizar estado: {e.Message}"
                 };
             }
         }

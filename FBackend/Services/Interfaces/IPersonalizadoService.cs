@@ -12,5 +12,6 @@ namespace FBackend.Services.Interfaces
         Task<ResponseDto<PersonalizadoDto>> ObtenerPedidoPersonalizado(Guid id);
         Task<ResponseDto<List<PersonalizadoDto>>> ObtenerPedidosPorCliente(string clienteId);
         Task<ResponseDto<List<PersonalizadoDto>>> ObtenerPedidosPersonalizados();
+        Task<ResponseDto<PersonalizadoDto>> ActualizarEstado(Guid id, string nuevoEstado);
     }
 }

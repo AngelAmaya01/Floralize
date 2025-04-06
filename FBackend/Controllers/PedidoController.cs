@@ -1,5 +1,6 @@
 ﻿using ApiCitaOdon.Data;
 using FBackend.Models.DTOs.PedidosDtos;
+using FBackend.Services;
 using FBackend.Services.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -33,19 +34,28 @@ namespace FBackend.Controllers
         }
 
         [HttpPut("{id}/estado")]
-        public async Task<IActionResult> CambiarEstado(Guid id, [FromBody] CambiarEstadoDto model)
+        public async Task<IActionResult> ActualizarEstado(Guid id, [FromBody] ActualizarEstadoRequest request)
         {
-            var pedido = await _context.Pedidos.FindAsync(id);
-
-            if (pedido == null)
+            try
             {
-                return NotFound(new { status = false, message = "Pedido no encontrado" });
+                var result = await _pedidoService.ActualizarEstado(id, request.Estado);
+
+                if (!result.Status)
+                {
+                    return BadRequest(result);
+                }
+
+                return Ok(result);
             }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Status = false, Message = "Error interno del servidor" });
+            }
+        }
 
-            pedido.Estado = model.Estado;
-            await _context.SaveChangesAsync();
-
-            return Ok(new { status = true, message = "Estado actualizado correctamente" });
+        public class ActualizarEstadoRequest
+        {
+            public string Estado { get; set; }
         }
 
         public class CambiarEstadoDto

@@ -468,17 +468,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CambiarEstadoDto"
+                "$ref": "#/components/schemas/ActualizarEstadoRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CambiarEstadoDto"
+                "$ref": "#/components/schemas/ActualizarEstadoRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CambiarEstadoDto"
+                "$ref": "#/components/schemas/ActualizarEstadoRequest"
               }
             }
           }
@@ -633,17 +633,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CambiarEstadoDto"
+                "type": "string"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/CambiarEstadoDto"
+                "type": "string"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/CambiarEstadoDto"
+                "type": "string"
               }
             }
           }
@@ -1191,7 +1191,7 @@
   },
   "components": {
     "schemas": {
-      "CambiarEstadoDto": {
+      "ActualizarEstadoRequest": {
         "type": "object",
         "properties": {
           "estado": {

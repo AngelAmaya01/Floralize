@@ -1,4 +1,5 @@
 ﻿using ApiCitaOdon.Data;
+using ApiCitaOdon.Services.Interfaces;
 using AutoMapper;
 using FBackend.Models;
 using FBackend.Models.DTOs;
@@ -13,11 +14,14 @@ namespace FBackend.Services
     {
         private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;
+        private readonly IEmailService _emailService;
+        private readonly int _lowStockThreshold = 10;
 
-        public InventarioService(ApplicationDbContext context,  IMapper mapper)
+        public InventarioService(ApplicationDbContext context,  IMapper mapper, IEmailService emailService)
         {
             _context = context;
             _mapper = mapper;
+            _emailService = emailService;
         }
 
         public async Task<ResponseDto<InventarioDto>> agregarProducto(InventarioCreateDtos model)
@@ -77,6 +81,10 @@ namespace FBackend.Services
                 };
             }
 
+            // Verificar si el stock bajó del umbral
+            bool wasAboveThreshold = inventario.Cantidad > _lowStockThreshold;
+            bool isNowBelowThreshold = model.Cantidad <= _lowStockThreshold;
+
             inventario.Nombre = model.Nombre;
             inventario.Cantidad = model.Cantidad;
             inventario.Ubicacion = model.Ubicacion;
@@ -84,6 +92,12 @@ namespace FBackend.Services
 
             _context.Inventario.Update(inventario);
             await _context.SaveChangesAsync();
+
+            // Enviar notificación si el stock bajó del umbral
+            if (wasAboveThreshold && isNowBelowThreshold)
+            {
+                await _emailService.SendLowStockNotificationAsync(id, model.Cantidad);
+            }
 
             var inventarioDto = _mapper.Map<InventarioDto>(inventario);
 

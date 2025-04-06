@@ -6,7 +6,7 @@ namespace FBackend.Models
     public class Personalizado
     {
         public Guid Id { get; set; }
-
+        public DateTime FechaPedido { get; set; } = DateTime.UtcNow;
         public string TipoFlor { get; set; }
         public string Cantidad { get; set; }
         public string IncluirPresente { get; set; }

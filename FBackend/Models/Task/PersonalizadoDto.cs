@@ -3,7 +3,7 @@
     public class PersonalizadoDto
     {
         public Guid Id { get; set; }
-
+        public DateTime FechaPedido { get; set; }
         public string TipoFlor { get; set; }
         public string nombreCliente { get; set; }
         public string Direccion { get; set; }

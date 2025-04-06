@@ -55,20 +55,37 @@ namespace FBackend.Controllers
         }
 
         [HttpPut("{id}/estado")]
-        public async Task<IActionResult> CambiarEstado(Guid id, [FromBody] CambiarEstadoDto model)
+        public async Task<IActionResult> ActualizarEstado(Guid id, [FromBody] string estado)
         {
-            // Cambiar de _context.Pedidos a _context.Personalizados
-            var pedido = await _context.Personalizados.FindAsync(id);
-
-            if (pedido == null)
+            try
             {
-                return NotFound(new { status = false, message = "Pedido personalizado no encontrado" });
+                // Validación adicional del estado
+                if (string.IsNullOrWhiteSpace(estado))
+                {
+                    return BadRequest(new
+                    {
+                        status = false,
+                        message = "El estado no puede estar vacío"
+                    });
+                }
+
+                var response = await _personalizadoService.ActualizarEstado(id, estado);
+
+                if (!response.Status)
+                {
+                    return StatusCode(response.StatusCode, response);
+                }
+
+                return Ok(response);
             }
-
-            pedido.Estado = model.Estado;
-            await _context.SaveChangesAsync();
-
-            return Ok(new { status = true, message = "Estado actualizado correctamente" });
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    status = false,
+                    message = $"Error interno: {ex.Message}"
+                });
+            }
         }
 
         [HttpGet("{id}")]
